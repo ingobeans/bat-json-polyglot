@@ -16,7 +16,7 @@ def generate_polyglot(batch_data:str,json_data:dict)->str:
     
     batch_json[f'{random.randint(0,999)}\" > nul 2> nul & exit & ::'] = 1
     new = json.dumps({**batch_json, **json_data},indent=4)
-    new = new.replace("{\n    ","{")
+    new = new.replace("{\n    ","{", 1)
 
     # validate that it still is valid json
     try:
