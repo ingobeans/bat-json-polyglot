@@ -4,8 +4,6 @@ def generate_polyglot(batch_data:str,json_data:dict)->str:
     rows = batch_data.split("\n")
     batch_json = {}
 
-    batch_json[f'{random.randint(0,999)}\" > nul 2> nul & @echo off & ::'] = 1
-
     for row in rows:
         if not row:
             continue
